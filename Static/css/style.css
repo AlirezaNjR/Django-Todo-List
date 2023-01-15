@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Vazir;
+    src: url('../font/Vazir-Regular.ttf');
+}
+
+@font-face {
+    font-family: BNazanin;
+    src: url('../font/BNazanin.ttf');
+}
+
+*{
+    font-family: 'Vazir' ;
+    direction: rtl;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

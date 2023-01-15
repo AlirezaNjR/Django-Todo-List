@@ -18,7 +18,7 @@ from django.contrib import admin
 from .views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home,name='home'),
+    path('',home,name='Home'),
     path('',include('Todo.urls')),
 ]
 

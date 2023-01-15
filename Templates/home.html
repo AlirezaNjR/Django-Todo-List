@@ -20,9 +20,9 @@
                     <a href="#" class="delete-btn"> حذف </a>
                 </div>
                 {% else %}
-                    <form action="" method="get" name="WorkForm" id="WorkForm">
+                    <form action="{% url 'Todo:Change' work.id %}" method="get" name="WorkForm" id="WorkForm">
                         <div class="work">
-                            <input type="checkbox" name="" id="" style="width: 25px ; height: 25px;">
+                            <input type="checkbox" name="done" id="" style="width: 25px ; height: 25px;">
                             <span> {{work.title}} </span> 
                             <a href="#" class="delete-btn"> حذف </a> 
                         </div>

@@ -1,12 +1,32 @@
+
 .container{
     height: 100vh;
     display: grid;
     grid-template-rows: minmax(10px,1fr) max-content minmax(0,1fr);
-    grid-template-columns: minmax(10px,1fr) max-content minmax(0,1fr);
+    grid-template-columns: minmax(10px,1fr) minmax(400px,40%) minmax(0,1fr);
 
 }
 
 .works{
     grid-row: 2/3;
     grid-column: 2/3;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+
+.work{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.work .delete-btn{
+    text-decoration: none;
+    float: left;
+}
+
+.done{
+    color: #ccc;
 }

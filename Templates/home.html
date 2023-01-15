@@ -8,15 +8,30 @@
 {% block body %}    
     <div class="container">
         <div class="works">
-            <form action="" method="post">
-                <input type="text" name="title" >
+            <form action="" method="post" >
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="عنوان">
+                <input type="submit" value="اضافه کردن">
             </form>
             {% for work in todo_list %}
-                {{work}}
+                {% if work.done %} 
+                <div class="work done"> 
+                    <del> {{work.title}} </del>
+                    <a href="#" class="delete-btn"> حذف </a>
+                </div>
+                {% else %}
+                    <form action="" method="get" name="WorkForm" id="WorkForm">
+                        <div class="work">
+                            <input type="checkbox" name="" id="" style="width: 25px ; height: 25px;">
+                            <span> {{work.title}} </span> 
+                            <a href="#" class="delete-btn"> حذف </a> 
+                        </div>
+                    </form>
+                {% endif %}
                 {% empty %}
-                <p>none</p>
+                    <p>none</p>
             {% endfor %}  
         </div>
     </div>
-  
+    <script src="{% static 'js/main.js' %}"></script>
 {% endblock body %}

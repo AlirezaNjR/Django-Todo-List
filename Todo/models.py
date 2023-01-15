@@ -8,4 +8,4 @@ class TodoModel(models.Model):
     user = models.ForeignKey(User,related_name='User',on_delete=models.CASCADE,null=False,blank=False)
 
     def __str__(self) -> str:
-        return  f"{self.title} : {self.date} - Done :{self.done}"
+        return  f"{self.title} :  Done :{self.done}"

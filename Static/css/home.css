@@ -22,10 +22,43 @@
     border-radius: 30px;
 }
 
-.work .delete-btn{
-    text-decoration: none;
-    float: left;
+.text-input{
+    width: 75%;
 }
+
+.submit{    
+    background-color:#76FF03;
+    color: #333;
+    border: transparent;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit:hover{
+    color: #76FF03;
+    background-color: #333;
+}
+
+.work .delete-btn{
+    float: left;
+    text-decoration: none;
+    font-size: 26px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 40px;
+    background-color: #FF1744;
+    color: #333;
+    transition: 0.3s;
+}
+
+.work .delete-btn:hover{
+    color:#FF1744;
+    background-color: #333;
+}
+
+
 
 .done{
     color: #ccc;

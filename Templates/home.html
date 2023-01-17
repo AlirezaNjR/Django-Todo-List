@@ -10,8 +10,8 @@
         <div class="works">
             <form action="" method="post" >
                 {% csrf_token %}
-                <input type="text" name="title" placeholder="عنوان">
-                <input type="submit" value="اضافه کردن">
+                <input type="text" name="title" placeholder="عنوان" class="text-input">
+                <input type="submit" value="اضافه کردن" class="submit">
             </form>
             {% for work in todo_list %}
                 {% if work.done %} 
@@ -33,5 +33,6 @@
             {% endfor %}  
         </div>
     </div>
+    
     <script src="{% static 'js/main.js' %}"></script>
 {% endblock body %}

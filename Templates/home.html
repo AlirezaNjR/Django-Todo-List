@@ -8,7 +8,7 @@
 {% block body %}    
     <div class="container">
         <div class="works">
-            <form action="" method="post" >
+            <form action="{% url 'Todo:Add_Work' %}" method="get" >
                 {% csrf_token %}
                 <input type="text" name="title" placeholder="عنوان" class="text-input">
                 <input type="submit" value="اضافه کردن" class="submit">
@@ -25,6 +25,7 @@
                             <input type="checkbox" name="done" id="" style="width: 25px ; height: 25px;">
                             <span> {{work.title}} </span> 
                             <a href="#" class="delete-btn"> حذف </a> 
+                            <button type="submit" class="save-btn"> ذخیره </button>
                         </div>
                     </form>
                 {% endif %}

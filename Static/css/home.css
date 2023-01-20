@@ -58,7 +58,23 @@
     background-color: #333;
 }
 
+.work .save-btn{
+    float: left;
+    text-decoration: none;
+    font-size: 26px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: transparent;
+    border-radius: 40px;
+    background-color: #0288D1;
+    color: #333;
+    transition: 0.3s;
+}
 
+.work .save-btn:hover{
+    color:#0288D1;
+    background-color: #333;
+}
 
 .done{
     color: #ccc;

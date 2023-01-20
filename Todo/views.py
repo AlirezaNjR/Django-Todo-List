@@ -28,3 +28,8 @@ def add_work(request):
         return redirect('Home')    
     else:
         pass
+    
+def delete_work(request,id):
+    work = TodoModel.objects.get(id=id)
+    work.delete()
+    return redirect('Home')

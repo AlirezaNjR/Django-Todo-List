@@ -14,24 +14,30 @@
                 <input type="submit" value="اضافه کردن" class="submit">
             </form>
             {% for work in todo_list %}
-                {% if work.done %} 
-                <div class="work done"> 
-                    <del> {{work.title}} </del>
-                    <a href="#" class="delete-btn"> حذف </a>
-                </div>
-                {% else %}
-                    <form action="{% url 'Todo:Change' work.id %}" method="get" name="WorkForm" id="WorkForm">
-                        <div class="work">
-                            <input type="checkbox" name="done" id="" style="width: 25px ; height: 25px;">
-                            <span> {{work.title}} </span> 
-                            <a href="#" class="delete-btn"> حذف </a> 
-                            <button type="submit" class="save-btn"> ذخیره </button>
-                        </div>
-                    </form>
-                {% endif %}
+                <form action="{% url 'Todo:Change' work.id %}" method="get" name="WorkForm" id="WorkForm">
+                    <div class="work">
+                        <input type="checkbox" name="done" id="" style="width: 25px ; height: 25px;">
+                        <span> {{work.title}} </span> 
+                        <a href="{% url 'Todo:Delete_Work' work.id %}" class="delete-btn"> حذف </a> 
+                        <button type="submit" class="save-btn"> ذخیره </button>
+                    </div>
+                </form>
                 {% empty %}
-                    <p>none</p>
+                    <p> هورا همه کار ها به پایان رسید </p>
             {% endfor %}  
+            <hr>
+            <h1> انجام شده </h1>
+            {% for work in todo_list_done %}
+                <div>     
+                    <div class="work done"> 
+                        <del> {{work.title}} </del>
+                        <a href="{% url 'Todo:Delete_Work' work.id %}" class="delete-btn"> حذف </a>
+                    </div>
+                </div>
+                {% empty %}
+                    <p> کار امروز را به فردا نسپار </p>
+            {% endfor %}
+                
         </div>
     </div>
     

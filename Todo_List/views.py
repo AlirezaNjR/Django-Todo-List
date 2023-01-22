@@ -3,7 +3,7 @@ from Todo.models import TodoModel
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
-@login_required(login_url='Home')
+@login_required(login_url='login')
 def home(request):
     user = request.user
     todo_list = TodoModel.objects.filter(user=user,done=False)

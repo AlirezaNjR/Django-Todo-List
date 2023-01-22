@@ -16,3 +16,11 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url('../img/markus-winkler-Q2J2qQsoYH8-unsplash.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);  
+
+}

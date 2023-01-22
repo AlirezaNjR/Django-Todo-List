@@ -1,0 +1,12 @@
+<header style="background-color: #CCC; text-align: center;">
+        <span style="float: right; position: absolute; right: 5px;">
+            سلام
+            {% if user.first_name %}
+                {{user.first_name}} {{user.last_name}}
+            {% else %}
+                {{user.username}}
+            {% endif %}
+        </span>
+        <span style="text-align: center;"> کارهای من </span>
+        <a href="{% url 'logout' %}" style="float: left; text-decoration: none; color: #000;">خروج</a>
+</header>

@@ -1,6 +1,6 @@
 
 .container{
-    height: 100vh;
+    height: 80vh;
     display: grid;
     grid-template-rows: minmax(10px,1fr) max-content minmax(0,1fr);
     grid-template-columns: minmax(10px,1fr) minmax(400px,40%) minmax(0,1fr);
@@ -18,7 +18,7 @@
 .work{
     margin: 10px;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 30px;
 }
 
@@ -77,5 +77,5 @@
 }
 
 .done{
-    color: #ccc;
+    color: #333;
 }

@@ -6,22 +6,20 @@
 {% endblock head %}
 
 {% block body %}    
+    {% include "partials/header.html" %}
     <div class="container">
         <div class="works">
             <form action="{% url 'Todo:Add_Work' %}" method="get" >
                 {% csrf_token %}
-                <input type="text" name="title" placeholder="عنوان" class="text-input">
-                <input type="submit" value="اضافه کردن" class="submit">
+                <input type="text" name="title" placeholder="عنوان" class="text-input" required>
+                <input type="submit" value="اضافه کردن" class="submit" >
             </form>
             {% for work in todo_list %}
-                <form action="{% url 'Todo:Change' work.id %}" method="get" name="WorkForm" id="WorkForm">
-                    <div class="work">
-                        <input type="checkbox" name="done" id="" style="width: 25px ; height: 25px;">
-                        <span> {{work.title}} </span> 
-                        <a href="{% url 'Todo:Delete_Work' work.id %}" class="delete-btn"> حذف </a> 
-                        <button type="submit" class="save-btn"> ذخیره </button>
-                    </div>
-                </form>
+                <div class="work">
+                    <a href="{% url 'Todo:Change' work.id %}"><img src="{% static 'img/tick-icon.png' %}" title="انجام شد" alt="انجام شد " width="40px" height="35px"></a>
+                    <span> {{work.title}} </span> 
+                    <a href="{% url 'Todo:Delete_Work' work.id %}" class="delete-btn"> حذف </a> 
+                </div>
                 {% empty %}
                     <p> هورا همه کار ها به پایان رسید </p>
             {% endfor %}  

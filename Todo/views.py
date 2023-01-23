@@ -24,7 +24,7 @@ def add_work(request):
         work.save()
         return redirect('Home')    
     else:
-        pass
+        return HttpResponse('eer')
     
 @login_required(login_url='login')    
 def delete_work(request,id):
@@ -33,4 +33,4 @@ def delete_work(request,id):
         work.delete()
         return redirect('Home')
     else :
-        return HttpResponse('403')
+        return HttpResponse('404')

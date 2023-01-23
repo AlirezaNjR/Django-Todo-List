@@ -1,5 +1,6 @@
 from django.urls import path 
 from .views import change , add_work , delete_work
+
 app_name = 'Todo'
 
 urlpatterns = [

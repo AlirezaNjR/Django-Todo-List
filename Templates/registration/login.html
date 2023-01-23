@@ -6,6 +6,7 @@
         {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="login">
+        <a href="{% url 'Accounts:Signup' %}">ثبت نام</a>
     </form>
 
 {% endblock body %}

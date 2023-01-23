@@ -1,0 +1,18 @@
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: minmax(10px,1fr) max-content minmax(0,1fr);
+    grid-template-columns: minmax(10px,1fr) minmax(400px,40%) minmax(0,1fr);
+
+}
+
+.center{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    border: 1px solid #333;
+    padding: 10px;
+}
+
+label{
+    display: block;
+}

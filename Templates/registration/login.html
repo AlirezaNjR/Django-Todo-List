@@ -1,12 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <title>ورود</title>
+    <link rel="stylesheet" href="{% static 'css/registration/login.css' %}">
+{% endblock head %}
 
 {% block body %}
-
-<form action="" method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="login">
-        <a href="{% url 'Accounts:Signup' %}">ثبت نام</a>
-    </form>
-
+    <div class="container">
+        <form action="" method="post" class="center">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="ورود" class="btn btn-success">
+            <a href="{% url 'Accounts:Signup' %}"  class="btn btn-primary" role="button"> ثبت نام </a>
+        </form>
+    </div>
 {% endblock body %}

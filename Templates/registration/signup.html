@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block head %}
     <title> ثبت نام </title>
+    <link rel="stylesheet" href="{% static 'css/registration/signup.css' %}">
 {% endblock head %}
 
 {% block body %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="ثبت نام">
-        <a href="{% url 'login' %}"> ورود </a>
-    </form>
+    <div class="container">
+        <form action="" method="post" class="center">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="ثبت نام" style="display: inline;" class="btn btn-success">
+            <a href="{% url 'login' %}"  class="btn btn-primary" role="button"> ورود </a>
+        </form>
+    </div>
 {% endblock body %}

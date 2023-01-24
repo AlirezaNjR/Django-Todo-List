@@ -8,6 +8,13 @@
 {% block body %}
     <div class="container">
         <form action="" method="post" class="center">
+            {% for field in form %}
+                {% if field.errors %}
+                    {% for error in field.errors %}
+                        <p style="color: red;">{{error}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
             {% csrf_token %}
             {{form.as_p}}
             <input type="submit" value="ثبت نام" style="display: inline;" class="btn btn-success">

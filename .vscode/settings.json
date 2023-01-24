@@ -4,5 +4,8 @@
         "titleBar.activeBackground": "#3F4304",
         "titleBar.activeForeground": "#FAFDD8"
     },
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "python.linting.flake8Enabled": false,
+    "python.linting.enabled": true,
+    "python.linting.banditEnabled": true
 }

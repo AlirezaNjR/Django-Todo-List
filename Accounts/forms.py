@@ -1,5 +1,5 @@
 from django import forms
-
+from django.contrib.auth.models import User
 class SignUpForm(forms.Form):
     username = forms.CharField(max_length=32,required=True,label='نام کاربری')
     first_name = forms.CharField(max_length=32,required=False,label='نام')

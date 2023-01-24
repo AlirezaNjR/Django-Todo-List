@@ -8,4 +8,14 @@ def home(request):
     user = request.user
     todo_list = TodoModel.objects.filter(user=user,done=False)
     todo_list_done = TodoModel.objects.filter(user=user,done=True)
-    return render(request,'home.html',{'todo_list':todo_list,'todo_list_done':todo_list_done})
+    return render(
+        request,
+        'home.html',
+        {
+            'todo_list':todo_list,
+            'todo_list_done':todo_list_done
+        }
+    )
+    
+def contact_me(request):
+    return render(request,'contact_me.html')
